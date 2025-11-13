@@ -1,5 +1,7 @@
 # DSBSC
+NAME : NABISHA A
 
+REG NO : 212223060177
 
 EX NO: 2	DSB-SC-AM MODULATOR AND DEMODULATOR
 
@@ -47,13 +49,33 @@ Model Waveform
 
 <img width="703" height="679" alt="image" src="https://github.com/user-attachments/assets/e7c7c7f8-ccf2-41ac-b1f3-325989941a6f" />
 
-Program
+Program :
+```
+Ac=4.2; 
+fc=5000; 
+Am=10.2; 
+fm=500; 
+fs=50000; 
+t=0:1/fs:2/fm; 
+Wm=2*3.14*fm; 
+Wc=2*3.14*fc; 
+Em=Am*sin(2*3.14*fm*t); 
+subplot(3,1,1); 
+plot(t,Em); 
+Ec=Ac*sin(2*3.14*fc*t); 
+subplot(3,1,2); 
+plot(t,Ec); 
+Edsbsc=((Am/2)*cos((Wc-Wm)*t))-((Am/2)*cos((Wc+Wm)*t)); 
+subplot(3,1,3); 
+plot(t,Edsbsc);
+```
 
 Output Graph
+<img width="1100" height="604" alt="image" src="https://github.com/user-attachments/assets/86d7ce51-6bfb-470b-a066-8fa001569b80" />
 
 
-Tablular Column
-
+Tablular Column :
+<img width="842" height="1280" alt="image" src="https://github.com/user-attachments/assets/745b64cc-269e-4d80-a643-bb37208f51ea" />
 
 Result
 
